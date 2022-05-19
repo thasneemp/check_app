@@ -3,11 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/news_navigation"
-    app:startDestination="@id/newsListFragment">
+    app:startDestination="@id/productListFragment">
 
     <fragment
-        android:id="@+id/newsListFragment"
-        android:name="com.mhdthasneemp.clean_base.presentation.news.NewsListFragment"
-        android:label="NewsListFragment"
-        tools:layout="@layout/news_list_fragment" />
+        android:id="@+id/productListFragment"
+        android:name="com.mhdthasneemp.check_24.presentation.products.ProductListFragment"
+        android:label="ProductListFragment"
+        tools:layout="@layout/product_list_fragment">
+        <action
+            android:id="@+id/action_productListFragment_to_productOverViewActivity"
+            app:destination="@id/productOverViewActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/productOverViewActivity"
+        android:name="com.mhdthasneemp.check_24.presentation.products.ProductOverViewActivity"
+        android:label="ProductOverViewActivity"
+        tools:layout="@layout/productoverviewactivity" />
 </navigation>
